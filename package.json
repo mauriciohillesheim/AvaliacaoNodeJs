@@ -1,0 +1,19 @@
+{
+  "name": "avalicao-backend-web",
+  "version": "1.0.0",
+  "description": "avaliacao backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "test": "jest --coverage"
+  },
+  "author": "Mauricio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "react-router-dom": "^6.26.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
