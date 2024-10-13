@@ -1,12 +1,18 @@
+// index.js
 const express = require('express');
-const router = require('./src/routes/api');
+const bodyParser = require('body-parser');
+const calculatorRoutes = require('./src/routes/api');
 
 const app = express();
+app.use(bodyParser.json());
 
-app.use(express.json());
+app.use('/api/calculator', calculatorRoutes);
 
-app.use(router)
+app.get('/', (req, res) => {
+    res.send('Bem-vindo à API da Calculadora!');
+});
 
-app.listen(3000, () => {
-    console.log('servidor está rodando na porta 3000')
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
