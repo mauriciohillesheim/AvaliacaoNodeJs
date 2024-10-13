@@ -5,15 +5,23 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --watch index.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start": "node src/app.js"
+
   },
   "author": "Mauricio",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "express": "^4.21.1",
-    "react-router-dom": "^6.26.1"
+    "react-router-dom": "^6.26.1",
+    "supertest": "^7.0.0"
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": []
 }

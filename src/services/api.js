@@ -1,11 +1,29 @@
-class ServiceApi {
-    Somar(num1, num2) {
-        if (isNaN(num1) || isNaN(num2)) {
-            throw new Error('Informe um número')
-        }
-        return Number(num1) + Number(num2);
+class CalculatorService {
+    static add(a, b) {
+        return a + b;
+    }
+
+    static subtract(a, b) {
+        return a - b;
+    }
+
+    static multiply(a, b) {
+        return a * b;
+    }
+
+    static divide(a, b) {
+        if (b === 0) throw new Error('Divisão por zero!');
+        return a / b;
+    }
+
+    static power(a, b) {
+        return Math.pow(a, b);
+    }
+
+    static squareRoot(a) {
+        if (a < 0) throw new Error('Raiz quadrada de número negativo!');
+        return Math.sqrt(a);
     }
 }
 
-// module.exports = ServiceApi -> const api = new ServiceApi()
-module.exports = new ServiceApi()
+module.exports = CalculatorService;

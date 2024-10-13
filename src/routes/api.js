@@ -1,9 +1,9 @@
 const express = require('express');
-const express = require('../controllers/api')
+const CalculatorController = require('../controllers/api');
 
 const router = express.Router();
 
-router.post('/api/somar', (req, res)=>{})
-router.post('/funciona', ()=>{})
+router.post('/calculate', CalculatorController.calculate);
+router.get('/operations', CalculatorController.getOperations);
 
 module.exports = router;
